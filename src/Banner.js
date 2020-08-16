@@ -11,7 +11,7 @@ function Banner() {
       const request = await axios.get(requests.fetchTrendings);
       setMovie(
         request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 1)
+        Math.floor(Math.random() * request.data.results.length - 1)
         ]
       );
       return request;
@@ -48,6 +48,7 @@ function Banner() {
           {truncate(movie?.overview, 150)}
         </h1>
       </div>
+      <div className="banner__fadeBottom" />
     </header>
   );
 }
